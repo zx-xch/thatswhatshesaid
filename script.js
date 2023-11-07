@@ -13,7 +13,7 @@ async function getQuote() {
     console.log(data['quote'])
     console.log(data['character'])
     let url = "https://twitter.com/intent/tweet?text=%22"+encodeURI(data['quote'])+"%22%0a%2D%20"+encodeURI(data['character'])+"%0a&url=www.officequote.io";
-    document.getElementById('quote').innerHTML = '"'+ data['quote'];+'"'
+    document.getElementById('quote').innerHTML = '"'+ data['quote']+'"';
     document.getElementById('character').innerHTML = "- " + data['character'];
     document.getElementById('tweet').setAttribute('href',url);
 }).catch(function (err) {
